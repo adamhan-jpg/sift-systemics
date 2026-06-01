@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState } from "react";
 import {
   ArrowRight,
   Check,
@@ -21,88 +22,6 @@ function SiftLogo({ size = 72 }) {
     />
   );
 }
-
-<section className="border-t border-black/10 bg-white px-6 py-14 md:px-8">
-  <div className="mx-auto max-w-7xl text-center">
-    <h2 className="text-xl font-black uppercase tracking-wide md:text-2xl">
-      How SIFT Systemics Works
-    </h2>
-
-    <div className="mt-10 grid gap-10 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] md:items-start">
-
-      <div className="text-center">
-        <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-black/5">
-          <ClipboardCheck className="h-16 w-16 stroke-[2.2]" />
-        </div>
-
-        <h3 className="mt-6 text-lg font-black uppercase">
-          1. Incident Data
-        </h3>
-
-        <div className="mx-auto mt-3 h-0.5 w-12 bg-orange-500" />
-
-        <p className="mx-auto mt-4 max-w-48 text-base font-medium leading-7">
-          Near misses, observations, first aid, recordables, and incident reports.
-        </p>
-      </div>
-
-      <ArrowRight className="mx-auto hidden h-10 w-10 self-center md:block" />
-
-      <div className="text-center">
-        <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-black/5">
-          <Filter className="h-16 w-16 stroke-[2.2]" />
-        </div>
-
-        <h3 className="mt-6 text-lg font-black uppercase">
-          2. SIFT Analysis
-        </h3>
-
-        <div className="mx-auto mt-3 h-0.5 w-12 bg-orange-500" />
-
-        <p className="mx-auto mt-4 max-w-56 text-base font-medium leading-7">
-          AI and expert review uncover hidden energy pathways, exposure patterns, and control failures.
-        </p>
-      </div>
-
-      <ArrowRight className="mx-auto hidden h-10 w-10 self-center md:block" />
-
-      <div className="text-center">
-        <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-black/5">
-          <Search className="h-16 w-16 stroke-[2.2]" />
-        </div>
-
-        <h3 className="mt-6 text-lg font-black uppercase">
-          3. Hidden Risk Identified
-        </h3>
-
-        <div className="mx-auto mt-3 h-0.5 w-12 bg-orange-500" />
-
-        <p className="mx-auto mt-4 max-w-56 text-base font-medium leading-7">
-          High-consequence pathways identified before they lead to serious injury or fatality.
-        </p>
-      </div>
-
-      <ArrowRight className="mx-auto hidden h-10 w-10 self-center md:block" />
-
-      <div className="text-center">
-        <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-black/5">
-          <ShieldCheck className="h-16 w-16 stroke-[2.2]" />
-        </div>
-
-        <h3 className="mt-6 text-lg font-black uppercase">
-          4. Action Before a Fatality
-        </h3>
-
-        <div className="mx-auto mt-3 h-0.5 w-12 bg-orange-500" />
-
-        <p className="mx-auto mt-4 max-w-56 text-base font-medium leading-7">
-          Prioritize reviews, controls, and resources where fatal-risk potential is greatest.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 const stats = [
   {
@@ -217,6 +136,90 @@ export default function SiftSystemicsLandingPage() {
           </div>
         </section>
 
+        
+<section className="border-t border-black/10 bg-white px-6 py-14 md:px-8">
+  <div className="mx-auto max-w-7xl text-center">
+    <h2 className="text-xl font-black uppercase tracking-wide md:text-2xl">
+      How SIFT Systemics Works
+    </h2>
+
+    <div className="mt-10 grid gap-10 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] md:items-start">
+
+      <div className="text-center">
+        <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-black/5">
+          <ClipboardCheck className="h-16 w-16 stroke-[2.2]" />
+        </div>
+
+        <h3 className="mt-6 text-lg font-black uppercase">
+          1. Incident Data
+        </h3>
+
+        <div className="mx-auto mt-3 h-0.5 w-12 bg-orange-500" />
+
+        <p className="mx-auto mt-4 max-w-48 text-base font-medium leading-7">
+          Near misses, observations, first aid, recordables, and incident reports.
+        </p>
+      </div>
+
+      <ArrowRight className="mx-auto hidden h-10 w-10 self-center md:block" />
+
+      <div className="text-center">
+        <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-black/5">
+          <Filter className="h-16 w-16 stroke-[2.2]" />
+        </div>
+
+        <h3 className="mt-6 text-lg font-black uppercase">
+          2. SIFT Analysis
+        </h3>
+
+        <div className="mx-auto mt-3 h-0.5 w-12 bg-orange-500" />
+
+        <p className="mx-auto mt-4 max-w-56 text-base font-medium leading-7">
+          AI and expert review uncover hidden energy pathways, exposure patterns, and control failures.
+        </p>
+      </div>
+
+      <ArrowRight className="mx-auto hidden h-10 w-10 self-center md:block" />
+
+      <div className="text-center">
+        <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-black/5">
+          <Search className="h-16 w-16 stroke-[2.2]" />
+        </div>
+
+        <h3 className="mt-6 text-lg font-black uppercase">
+          3. Hidden Risk Identified
+        </h3>
+
+        <div className="mx-auto mt-3 h-0.5 w-12 bg-orange-500" />
+
+        <p className="mx-auto mt-4 max-w-56 text-base font-medium leading-7">
+          High-consequence pathways identified before they lead to serious injury or fatality.
+        </p>
+      </div>
+
+      <ArrowRight className="mx-auto hidden h-10 w-10 self-center md:block" />
+
+      <div className="text-center">
+        <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-black/5">
+          <ShieldCheck className="h-16 w-16 stroke-[2.2]" />
+        </div>
+
+        <h3 className="mt-6 text-lg font-black uppercase">
+          4. Action Before a Fatality
+        </h3>
+
+        <div className="mx-auto mt-3 h-0.5 w-12 bg-orange-500" />
+
+        <p className="mx-auto mt-4 max-w-56 text-base font-medium leading-7">
+          Prioritize reviews, controls, and resources where fatal-risk potential is greatest.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+        
         <section className="border-y border-black bg-black px-6 py-12 text-white md:px-8">
           <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
             {stats.map((stat) => (
